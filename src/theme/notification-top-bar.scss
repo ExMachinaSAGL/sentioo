@@ -1,0 +1,38 @@
+$top-icon-size: 25px;
+$badge-size: 20px;
+
+@mixin container {
+  position: relative;
+  box-sizing: border-box;
+  width: $top-icon-size;
+  background-color: rgba(0,0,0,0);
+}
+
+@mixin notification-icon {
+  font-size: 15px;
+  border-radius: 50%;
+  width: $top-icon-size;
+  height: $top-icon-size;
+  background-color: #878d99;
+  text-align: center;
+  line-height: $top-icon-size;
+  color: white;
+  top: -3px;
+  position: relative;
+}
+
+@mixin unread-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  border-radius: $badge-size/2;
+  font-size: 12px;
+  font-weight: bold;
+  min-width: $badge-size;
+  height: $badge-size;
+  background-color: #F44336;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.24);
+  text-align: center;
+  line-height: $badge-size;
+  color: white;
+}

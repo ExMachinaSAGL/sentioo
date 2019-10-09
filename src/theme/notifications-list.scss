@@ -1,0 +1,86 @@
+$dropdown-width: 400px;
+$list-header-height: 40px;
+
+@mixin container {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background-color: #eee;
+  margin: 0;
+  min-height: 150px;
+  width: $dropdown-width;
+  box-shadow: 0 2px 1px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+@mixin list-remove-all-btn {
+  text-decoration: none;
+  color: inherit;
+  padding: 0 10px;
+  padding-right: 8px;
+  font-size: 18px;
+  float: right;
+  opacity: 0.7;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+@mixin list-read-all-btn {
+  text-decoration: none;
+  color: inherit;
+  padding: 0 10px;
+  padding-left: 0;
+  font-size: 18px;
+  float: right;
+  opacity: 0.7;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+@mixin list-header {
+  height: $list-header-height;
+  background-color: #ddd;
+  width: $dropdown-width;
+  line-height: $list-header-height;
+  z-index: 10;
+  box-shadow: 0 2px 1px rgba(0,0,0,0.24);
+}
+
+@mixin unread-text {
+  line-height: $list-header-height;
+  text-align: right;
+  padding-left: 50px;
+}
+
+@mixin list {
+  list-style-type: none;
+  position: relative;
+  top: 1px;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+  max-height: 450px;
+  width: $dropdown-width;
+  z-index: 9;
+}
+
+@mixin list-empty {
+  margin-top: 40px;
+  color: rgb(61, 61, 61);
+}
+
+// Animations
+@mixin list-move {
+  transition: all 0.25s;
+}
+
+@mixin list-enter-active {
+  transition: all 0.25s;
+}
+
+@mixin list-enter {
+  opacity: 0;
+  transform: translateY(-50px);
+}

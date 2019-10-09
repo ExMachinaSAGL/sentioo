@@ -1,0 +1,24 @@
+@mixin app {
+  z-index: 1000;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  display: inline-block;
+  position: relative;
+  margin-right: 5px;
+}
+
+@mixin notifications-toggle {
+  text-decoration: none;
+  color: inherit;
+}
+
+@mixin toggle-animation-transition {
+  transition: opacity 0.1s;
+}
+
+@mixin toggle-animation-start {
+  opacity: 0;
+}

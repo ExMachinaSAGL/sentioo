@@ -1,0 +1,101 @@
+$icon-size: 35px;
+$header-height: 60px;
+
+@mixin container {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+@mixin btn-container {
+  line-height: $header-height;
+  margin: 0;
+  display: flex;
+  padding-right: 20px;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+@mixin icon-container {
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+}
+
+@mixin icon {
+  border-radius: 50%;
+  width: $icon-size;
+  height: $icon-size;
+  font-size: 18px;
+  background-color: #666;
+  text-align: center;
+  line-height: $icon-size;
+  color: white;
+}
+
+@mixin header {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@mixin title {
+  font-weight: 900;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 5px;
+  margin: 0;
+  flex: 3;
+  // Workaround for IE10 to make the text wrap.
+  word-wrap: break-word;
+  display: block;
+  max-width: 290px;
+}
+
+@mixin title-unread {
+  @include title;
+  font-weight: 900;
+}
+
+@mixin title-read {
+  @include title;
+  font-weight: 700;
+}
+
+@mixin text {
+  text-align: left;
+  padding: 0px 10px;
+  margin: 0;
+  min-width: 0;
+  margin-top: 5px;
+  // Workaround for IE10 to make the text wrap.
+  word-wrap: break-word;
+  display: block;
+  max-width: 350px;
+}
+
+@mixin read {
+  opacity: 0.8;
+}
+
+@mixin button {
+  padding: 0 10px;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  opacity: 0.5;
+  font-size: 20px;
+}
+
+@mixin notification-content {
+  p {
+    font-size: 12px;
+  }
+  .notification-datetime {
+    @include title;
+    font-weight: normal;
+    span {
+      font-weight: bold;
+    }
+  }
+}
