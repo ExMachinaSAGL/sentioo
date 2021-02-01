@@ -1,8 +1,6 @@
 # sentioo
-A configurable notification system, based on server sent events.
-
-## Description
-Sentioo is a configurable notification system that can be integrated as a module in a Vue.js web application. It displays notifications that are published by the backend on a [server-sent-events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events) feed.
+A configurable notification system, based on server sent events (SSE).
+It can be integrated as a module in a Vue.js web application. It displays notifications that are published by the backend on a [server-sent-events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events) feed.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/ExMachinaSAGL/sentioo/master/docs/images/dropdown.png" alt="The default dropdown view" width="500px"/>
@@ -26,7 +24,7 @@ npm test
 
 ---
 
-## Use as a Vue.js module
+## Using Sentioo as a Vue.js module
 
 ### Add dependencies
 Add as npm module in `package.json`, either as path to folder or to git repo.
